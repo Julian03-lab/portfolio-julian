@@ -6,6 +6,7 @@ import foto_hero from "@/assets/foto_hero.webp";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import MainButton from "../MainButton";
+import HeroTextSection from "./HeroTextSection";
 
 const Hero = () => {
   const scrollRef = useRef(null);
@@ -19,7 +20,7 @@ const Hero = () => {
     [0, 0.2, 0.3, 0.4],
     [0, 0, 0.5, 1]
   );
-  const x = useTransform(scrollYProgress, [0, 0.4], [0, -200]);
+  const x = useTransform(scrollYProgress, [0, 0.1, 0.4], [0, 0, -200]);
   const y = useTransform(scrollYProgress, [0, 0.4], [0, 100]);
   const button1 = useTransform(scrollYProgress, [0, 0.4], [0, 0.8]);
   const button2 = useTransform(scrollYProgress, [0.2, 0.5], [0, 0.8]);
@@ -99,14 +100,16 @@ const Hero = () => {
   return (
     <motion.section
       id="about"
-      className="px-14 pt-16 h-[300vh] w-full"
-      style={{
-        backgroundColor,
-      }}
+      className="px-28 pt-14 h-[300vh] w-full max-w-[1440px]"
+      style={
+        {
+          // backgroundColor,
+        }
+      }
       ref={scrollRef}
     >
       <div className="relative grid grid-cols-2 h-full w-fit mx-auto">
-        <motion.div
+        {/* <motion.div
           style={{
             x: "-50%",
             scale,
@@ -120,64 +123,42 @@ const Hero = () => {
             </span>{" "}
             Developer
           </h2>
-        </motion.div>
-        <div className="flex gap-2.5 flex-col">
-          <div className="flex flex-col w-fit">
-            <h1 className="text-[#141824] font-extrabold text-[8.125rem] leading-[8.125rem]">
-              Julian
-            </h1>
-            <h1 className="text-[#797878] font-extrabold text-[6.875rem] leading-[6.875rem]">
-              Fontana
-            </h1>
-          </div>
-          <h2 className="text-[#FB8122] font-medium text-[2.5rem]">
-            Front End Developer
-          </h2>
-        </div>
-        <div>
-          <motion.div
-            className="max-w-[433px]"
-            style={{
-              x,
-              y,
-              position: "fixed",
-            }}
-          >
-            {buttons.map((button) => (
-              <motion.div
-                key={button.id}
-                className={"absolute"}
-                style={button.style}
-              >
-                <MainButton>{button.text}</MainButton>
-              </motion.div>
-            ))}
-            <Image
-              priority
-              src={foto_hero}
-              alt="Foto Julian Fontana"
-              className="w-[433px] h-[530px]"
-            />
-            <motion.p
-              className="font-normal text-xs text-[#141824] mt-3"
-              style={{
-                opacity,
-              }}
-            >
-              quis ipsum consequat bibendum. Integer quis turpis euismod,
-              vestibulum ipsum eu, interdum velit. Donec aliquam, nunc vel
-              placerat luctus, magna ex interdum nulla, sit amet bibendum eros
-              odio sed tortor. Nunc egestas sapien vitae justo lacinia,
-            </motion.p>
-          </motion.div>
-        </div>
+        </motion.div> */}
+        <HeroTextSection />
+
         <motion.div
-          className="absolute top-[75vh]"
+          className="max-w-[433px] sticky top-14 h-screen"
           style={{
-            opacity,
+            x,
+            // y,
           }}
         >
-          <ScrollDownIcon />
+          {buttons.map((button) => (
+            <motion.div
+              key={button.id}
+              className={"absolute z-30"}
+              style={button.style}
+            >
+              <MainButton>{button.text}</MainButton>
+            </motion.div>
+          ))}
+          <Image
+            priority
+            src={foto_hero}
+            alt="Foto Julian Fontana"
+            className="w-full h-auto object-cover"
+          />
+          <motion.p
+            className="font-normal text-xs text-[#141824] mt-3"
+            style={{
+              opacity,
+            }}
+          >
+            quis ipsum consequat bibendum. Integer quis turpis euismod,
+            vestibulum ipsum eu, interdum velit. Donec aliquam, nunc vel
+            placerat luctus, magna ex interdum nulla, sit amet bibendum eros
+            odio sed tortor. Nunc egestas sapien vitae justo lacinia,
+          </motion.p>
         </motion.div>
       </div>
     </motion.section>

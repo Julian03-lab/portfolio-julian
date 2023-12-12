@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
-import { Chivo_Mono } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 
-const chivo = Chivo_Mono({ subsets: ["latin"] });
+const chivo = Poppins({
+  subsets: ["latin-ext"],
+  weight: ["400", "500", "600", "700", "800"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",

@@ -1,22 +1,27 @@
 import React from "react";
 import ScrollDownIcon from "../icons/ScrollDownIcon";
 import { motion } from "framer-motion";
+import { ConsoleIcon, DownloadIcon, MailIcon, MoonIcon } from "../icons/Icons";
+import Link from "next/link";
 
 const links = [
   {
     id: 1,
     text: "Descargar cv",
     href: "",
+    icon: <DownloadIcon />,
   },
   {
     id: 2,
     text: "Contactarme",
     href: "",
+    icon: <MailIcon />,
   },
   {
     id: 3,
     text: "Ver codigo fuente",
-    href: "",
+    href: "https://github.com/Julian03-lab/portfolio-julian",
+    icon: <ConsoleIcon />,
   },
 ];
 
@@ -42,9 +47,9 @@ const item = {
 
 const HeroTextSection = () => {
   return (
-    <div className="flex gap-2.5 flex-col h-[80vh] justify-between">
+    <div className="flex gap-2.5 flex-col h-[80vh] justify-between relative pt-10 max-h-[800px]">
       <motion.div
-        className="flex flex-col w-fit"
+        className="flex flex-col w-fit gap-5"
         initial={{
           opacity: 0,
           x: -40,
@@ -54,15 +59,31 @@ const HeroTextSection = () => {
           x: 0,
         }}
       >
-        <h1 className="text-[#141824] font-extrabold text-[8.125rem] leading-[8.125rem]">
-          JULIAN FONTANA
+        <motion.div
+          className="absolute top-2 -right-24"
+          animate={{
+            rotate: [-35, 10, -35],
+            transition: {
+              repeat: Infinity,
+              duration: 5,
+              ease: "linear",
+            },
+          }}
+        >
+          <MoonIcon />
+        </motion.div>
+        <h1 className="text-white font-extrabold text-[10.25rem] leading-[8.125rem]">
+          JULIAN
         </h1>
-        <h2 className="text-[#FB8122] font-medium text-[2.5rem]">
+        <h1 className="text-white font-extrabold text-[7.5rem] leading-[5.625rem]">
+          FONTANA
+        </h1>
+        <h2 className="text-[#FB8122] font-semibold text-[3.375rem]">
           FRONT END DEVELOPER
         </h2>
       </motion.div>
       <motion.ul
-        className="flex flex-col gap-2 items-start"
+        className="flex flex-col gap-5 items-start"
         variants={container}
         initial="hidden"
         animate="visible"
@@ -71,21 +92,40 @@ const HeroTextSection = () => {
           <motion.li
             variants={item}
             key={link.id}
-            className="text-black/40 font-bold text-2xl hover:text-black"
+            className=""
             whileHover={{ scale: 1.1, rotate: 2 }}
           >
-            <a href={link.href}>{link.text}</a>
+            <Link
+              href={link.href}
+              target="_blank"
+              className="flex gap-2.5 items-center text-white/60 font-semibold text-xl hover:text-white fill-current uppercase"
+            >
+              {link.icon}
+              {link.text}
+            </Link>
           </motion.li>
         ))}
       </motion.ul>
-      <div
-      //   className="absolute top-[75vh]"
-      //   style={{
-      //     opacity,
-      //   }}
+      <motion.div
+        className="flex flex-row gap-4"
+        initial={{
+          opacity: 0,
+          y: 40,
+        }}
+        animate={{
+          opacity: 1,
+          y: 0,
+          transition: {
+            delay: 1,
+            duration: 0.4,
+          },
+        }}
       >
         <ScrollDownIcon />
-      </div>
+        <span className="text-2xl text-white/60 font-semibold pt-3">
+          Start Scrolling
+        </span>
+      </motion.div>
     </div>
   );
 };

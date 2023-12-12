@@ -1,12 +1,14 @@
 "use client";
 
-import ScrollDownIcon from "@/components/icons/ScrollDownIcon";
 import Image from "next/image";
 import foto_hero from "@/assets/foto_hero.webp";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import MainButton from "../MainButton";
 import HeroTextSection from "./HeroTextSection";
+import StarsBg from "@/assets/stars-bg.webp";
+import GradientBg from "@/assets/hero-gradient.webp";
+import { MoonIcon } from "../icons/Icons";
 
 const Hero = () => {
   const scrollRef = useRef(null);
@@ -20,7 +22,7 @@ const Hero = () => {
     [0, 0.2, 0.3, 0.4],
     [0, 0, 0.5, 1]
   );
-  const x = useTransform(scrollYProgress, [0, 0.1, 0.4], [0, 0, -200]);
+  const x = useTransform(scrollYProgress, [0, 0.1, 0.4], [0, 0, -300]);
   const y = useTransform(scrollYProgress, [0, 0.4], [0, 100]);
   const button1 = useTransform(scrollYProgress, [0, 0.4], [0, 0.8]);
   const button2 = useTransform(scrollYProgress, [0.2, 0.5], [0, 0.8]);
@@ -100,15 +102,15 @@ const Hero = () => {
   return (
     <motion.section
       id="about"
-      className="px-28 pt-14 h-[300vh] w-full max-w-[1440px]"
-      style={
-        {
-          // backgroundColor,
-        }
-      }
+      className="px-28 pt-28 h-[300vh] w-full bg-gradient-to-br from-[#131428] from-15% via-[#191b42] via-45% to-[#2E349F]"
       ref={scrollRef}
     >
-      <div className="relative grid grid-cols-2 h-full w-fit mx-auto">
+      <div
+        className="relative grid grid-cols-2 h-full w-fit mx-auto max-w-[1440px] bg-contain justify-items-center"
+        style={{
+          backgroundImage: `url(${StarsBg.src})`,
+        }}
+      >
         {/* <motion.div
           style={{
             x: "-50%",
@@ -125,15 +127,25 @@ const Hero = () => {
           </h2>
         </motion.div> */}
         <HeroTextSection />
-
         <motion.div
-          className="max-w-[433px] sticky top-14 h-screen"
-          style={{
-            x,
-            // y,
+          className="sticky top-[80px] h-screen w-full flex justify-center items-start"
+          initial={{
+            opacity: 0,
           }}
+          animate={{
+            opacity: 1,
+            transition: {
+              duration: 0.6,
+            },
+          }}
+          style={
+            {
+              // x,
+              // y,
+            }
+          }
         >
-          {buttons.map((button) => (
+          {/* {buttons.map((button) => (
             <motion.div
               key={button.id}
               className={"absolute z-30"}
@@ -141,14 +153,20 @@ const Hero = () => {
             >
               <MainButton>{button.text}</MainButton>
             </motion.div>
-          ))}
+          ))} */}
           <Image
             priority
             src={foto_hero}
             alt="Foto Julian Fontana"
-            className="w-full h-auto object-cover"
+            className="w-[410px] select-none"
           />
-          <motion.p
+          <Image
+            priority
+            src={GradientBg}
+            alt="Gradient"
+            className="absolute top-12 w-full -z-10 select-none"
+          />
+          {/* <motion.p
             className="font-normal text-xs text-[#141824] mt-3"
             style={{
               opacity,
@@ -158,8 +176,17 @@ const Hero = () => {
             vestibulum ipsum eu, interdum velit. Donec aliquam, nunc vel
             placerat luctus, magna ex interdum nulla, sit amet bibendum eros
             odio sed tortor. Nunc egestas sapien vitae justo lacinia,
-          </motion.p>
+          </motion.p> */}
         </motion.div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
+          dolore natus dolorem repudiandae eos corporis nulla dignissimos. At ex
+          nemo quas aperiam incidunt veritatis, doloribus cumque sapiente esse
+          repellendus quis repellat enim tempora cum voluptas ipsam neque
+          tenetur eligendi quos fugiat corporis officiis eum! Autem error quas
+          repellat neque, pariatur libero aut, perferendis sed ratione maiores
+          corporis possimus quam nobis.
+        </p>
       </div>
     </motion.section>
   );

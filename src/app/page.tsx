@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <NavBar />
-      <main className="flex min-h-screen flex-col justify-between items-center bg-[#E3E0DD] pt-14">
+      <main className="flex min-h-screen flex-col justify-between items-center bg-[#131428]">
         <Hero />
         <section
           id="skills"

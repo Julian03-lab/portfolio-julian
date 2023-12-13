@@ -16,6 +16,7 @@ const HeroBoard = () => {
         top: "110px",
         left: "20px",
         rotate: "25deg",
+        scale: 0.9,
       },
     },
     {
@@ -25,6 +26,7 @@ const HeroBoard = () => {
         top: "145px",
         right: "67px",
         rotate: "25deg",
+        scale: 0.9,
       },
     },
     {
@@ -34,6 +36,7 @@ const HeroBoard = () => {
         top: "300px",
         left: "35px",
         rotate: "13deg",
+        scale: 0.9,
       },
     },
     {
@@ -43,6 +46,7 @@ const HeroBoard = () => {
         top: "250px",
         right: "260px",
         rotate: "14deg",
+        scale: 0.9,
       },
     },
     {
@@ -52,6 +56,7 @@ const HeroBoard = () => {
         bottom: "125px",
         right: "39px",
         rotate: "9deg",
+        scale: 0.9,
       },
     },
     {
@@ -61,6 +66,7 @@ const HeroBoard = () => {
         bottom: "336px",
         left: "220px",
         rotate: "5deg",
+        scale: 0.9,
       },
     },
   ];
@@ -97,7 +103,7 @@ const HeroBoard = () => {
             whileHover={{
               boxShadow: "0px 0px 8px 2px #131428",
             }}
-            whileTap={{ scale: 0.9 }}
+            whileTap={{ scale: 0.8 }}
           >
             {button.text}
           </motion.button>

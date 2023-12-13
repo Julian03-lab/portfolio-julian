@@ -47,7 +47,7 @@ const item = {
 
 const HeroTextSection = () => {
   return (
-    <div className="flex gap-2.5 flex-col h-[80vh] justify-between relative pt-10 max-h-[800px]">
+    <div className="flex gap-2.5 flex-col h-[70vh] justify-between relative">
       <motion.div
         className="flex flex-col w-fit gap-5"
         initial={{
@@ -59,19 +59,6 @@ const HeroTextSection = () => {
           x: 0,
         }}
       >
-        <motion.div
-          className="absolute top-2 -right-24"
-          animate={{
-            rotate: [-35, 10, -35],
-            transition: {
-              repeat: Infinity,
-              duration: 5,
-              ease: "linear",
-            },
-          }}
-        >
-          <MoonIcon />
-        </motion.div>
         <h1 className="text-white font-extrabold text-[10.25rem] leading-[8.125rem]">
           JULIAN
         </h1>
@@ -83,7 +70,7 @@ const HeroTextSection = () => {
         </h2>
       </motion.div>
       <motion.ul
-        className="flex flex-col gap-5 items-start"
+        className="flex flex-col gap-3 items-start"
         variants={container}
         initial="hidden"
         animate="visible"
@@ -98,7 +85,7 @@ const HeroTextSection = () => {
             <Link
               href={link.href}
               target="_blank"
-              className="flex gap-2.5 items-center text-white/60 font-semibold text-xl hover:text-white fill-current uppercase"
+              className="flex gap-2.5 items-center text-white font-semibold text-xl hover:text-[#FB8122] fill-current uppercase"
             >
               {link.icon}
               {link.text}
@@ -122,7 +109,7 @@ const HeroTextSection = () => {
         }}
       >
         <ScrollDownIcon />
-        <span className="text-2xl text-white/60 font-semibold pt-3">
+        <span className="text-lg text-white/80 font-semibold pt-3">
           Start Scrolling
         </span>
       </motion.div>

@@ -1,8 +1,12 @@
 import { useRef } from "react";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
 const HeroBoard = () => {
   const constraintsRef = useRef(null);
+  const inView = useInView(constraintsRef, {
+    once: true,
+    margin: "0px 0px -25% 0px",
+  });
 
   const buttons = [
     {
@@ -63,7 +67,15 @@ const HeroBoard = () => {
 
   return (
     <div className="min-h-screen flex items-center">
-      <div
+      <motion.div
+        initial={{
+          opacity: 0,
+          x: -100,
+        }}
+        animate={{
+          opacity: inView ? 1 : 0,
+          x: inView ? 0 : -100,
+        }}
         className="w-full border-2 border-white bg-emerald-500/40 h-[500px] relative flex flex-col items-center"
         ref={constraintsRef}
       >
@@ -83,14 +95,14 @@ const HeroBoard = () => {
             dragElastic={0}
             dragMomentum={false}
             whileHover={{
-              boxShadow: "0px 0px 8px 2px #FB8122",
+              boxShadow: "0px 0px 8px 2px #131428",
             }}
             whileTap={{ scale: 0.9 }}
           >
             {button.text}
           </motion.button>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };

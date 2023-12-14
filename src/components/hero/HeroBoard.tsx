@@ -1,11 +1,12 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { IconReact, IconTypescript } from "../icons/Icons";
 
 const HeroBoard = () => {
   const constraintsRef = useRef(null);
   const inView = useInView(constraintsRef, {
     once: true,
-    margin: "0px 0px -25% 0px",
+    margin: "0px 0px -50% 0px",
   });
 
   const buttons = [
@@ -103,11 +104,41 @@ const HeroBoard = () => {
             whileHover={{
               boxShadow: "0px 0px 8px 2px #131428",
             }}
-            whileTap={{ scale: 0.8 }}
+            whileTap={{ scale: 0.8, cursor: "grabbing" }}
           >
             {button.text}
           </motion.button>
         ))}
+        {/* <motion.button
+          className="absolute cursor-grab"
+          style={{
+            bottom: "20px",
+            right: "40px",
+            scale: 0.9,
+          }}
+          drag
+          dragConstraints={constraintsRef}
+          dragElastic={0}
+          dragMomentum={false}
+          whileTap={{ scale: 0.8, cursor: "grabbing" }}
+        >
+          <IconReact className="w-12 h-12 text-cyan-600" />
+        </motion.button>
+        <motion.button
+          className="absolute cursor-grab"
+          style={{
+            bottom: "20px",
+            right: "120px",
+            scale: 0.9,
+          }}
+          drag
+          dragConstraints={constraintsRef}
+          dragElastic={0}
+          dragMomentum={false}
+          whileTap={{ scale: 0.8, cursor: "grabbing" }}
+        >
+          <IconTypescript className="w-12 h-12 text-blue-500" />
+        </motion.button> */}
       </motion.div>
     </div>
   );

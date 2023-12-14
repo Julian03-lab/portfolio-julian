@@ -1,9 +1,11 @@
+import Image from "next/image";
 import Link from "next/link";
+import Icon from "@/assets/glasses.png";
 
 const NavBar = () => {
   return (
     <nav className="hidden lg:flex bg-gradient-to-r from-[#131428] from-60% to-75% to-[#191B43] justify-between items-center fixed w-full z-40 border-b border-b-white">
-      <div className="w-6 h-6 bg-black mx-4"></div>
+      <Image src={Icon} alt="icon" className="mx-4" />
       <ul className="flex gap-8 items-center">
         <li>
           <Link

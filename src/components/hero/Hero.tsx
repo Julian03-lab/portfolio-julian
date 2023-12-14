@@ -13,25 +13,6 @@ import { useRef } from "react";
 import HeroBoard from "./HeroBoard";
 
 const Hero = () => {
-  // const scrollRef = useRef(null);
-  // const { scrollYProgress } = useScroll({
-  //   target: scrollRef,
-  // });
-
-  // const opacity = useTransform(scrollYProgress, [0, 0.4], [1, 0]);
-  // const scale = useTransform(
-  //   scrollYProgress,
-  //   [0, 0.2, 0.3, 0.4],
-  //   [0, 0, 0.5, 1]
-  // );
-  // const x = useTransform(scrollYProgress, [0, 0.1, 0.4], [0, 0, -300]);
-  // const y = useTransform(scrollYProgress, [0, 0.4], [0, 100]);
-  // const button1 = useTransform(scrollYProgress, [0, 0.4], [0, 0.8]);
-  // const button2 = useTransform(scrollYProgress, [0.2, 0.5], [0, 0.8]);
-  // const button3 = useTransform(scrollYProgress, [0.4, 0.7], [0, 0.8]);
-  // const button4 = useTransform(scrollYProgress, [0.6, 0.9], [0, 0.8]);
-  // const button5 = useTransform(scrollYProgress, [0.7, 0.8], [0, 0.8]);
-  // const button6 = useTransform(scrollYProgress, [0.3, 0.6], [0, 0.8]);
   //
 
   return (
@@ -41,12 +22,13 @@ const Hero = () => {
       // ref={scrollRef}
     >
       {/* <motion.div
+        className="fixed w-[120px] h-0.5 bg-gradient-to-r from-transparent from-40% to-white"
         animate={{
           x: [-1000, 2000],
-          y: [-20, 120],
+          y: [-20, 420],
           transition: {
             repeat: Infinity,
-            duration: 9,
+            duration: 6,
             ease: "linear",
           },
         }}
@@ -55,7 +37,7 @@ const Hero = () => {
           src={StarLight}
           alt="Star Light"
           className="absolute w-[69px] h-[72px] -rotate-45"
-        />
+        /> 
       </motion.div> */}
       <div
         className="relative flex mx-auto max-w-[1440px] bg-contain justify-items-center py-20"

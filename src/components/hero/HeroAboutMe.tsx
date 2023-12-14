@@ -1,5 +1,7 @@
 import { motion, useInView } from "framer-motion";
+import Image from "next/image";
 import { useRef } from "react";
+import Ovni from "@/assets/ovni.png";
 
 const HeroAboutMe = () => {
   const aboutRef = useRef(null);
@@ -9,9 +11,22 @@ const HeroAboutMe = () => {
   });
   return (
     <div
-      className="flex flex-col gap-[22px] min-h-screen justify-center"
+      className="flex flex-col gap-[22px] min-h-screen justify-center relative"
       ref={aboutRef}
     >
+      {/* <motion.div
+        className="absolute bottom-16"
+        animate={{
+          y: [-20, 20, -20],
+          // rotate: [-10, 10, -10],
+          transition: {
+            repeat: Infinity,
+            duration: 8,
+          },
+        }}
+      >
+        <Image src={Ovni} alt="ovni" className="w-36 h-auto" />
+      </motion.div> */}
       <motion.h2
         className="text-[#fb8122] font-semibold text-5xl uppercase"
         initial={{

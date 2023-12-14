@@ -23,7 +23,7 @@ export const metadata: Metadata = {
       "Desarrollador Front End con experiencia en React y React Native. Actualmente trabajando en proyectos personales y colaborando en proyectos Open Source.",
     images: [
       {
-        url: "https://portfolio-julian-plum.vercel.app/images/main-page.png",
+        url: "https://raw.githubusercontent.com/Julian03-lab/portfolio-julian/master/public/main-page.png",
         width: 1200,
         height: 630,
         alt: "Julian Fontana - Desarrollador Front End",

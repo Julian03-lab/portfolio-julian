@@ -98,11 +98,7 @@ const HeroBoard = () => {
           },
         }}
         
-        className="w-full  h-[610px] relative flex flex-col items-center border-[16px] border-[#d58562] shadow-lg"
-        style={{
-          backgroundImage: `url(${Corcho.src})`,
-          backgroundSize: "cover",
-        }}
+        className="w-full  h-3/4 relative flex flex-col items-center border-white border-[3px]"
         ref={constraintsRef}
       >
         <div className="relative" draggable={false}>
@@ -118,7 +114,7 @@ const HeroBoard = () => {
          Más sobre mi
           </p>
           </div>
-        <p className="text-white/80 font-semibold text-base absolute bottom-2 left-2 select-none">
+        <p className="text-white/60 font-semibold text-base absolute bottom-4 left-4 select-none">
           Tip: Prueba a mover los elementos 😉
         </p>
         {buttons.map((button) => (

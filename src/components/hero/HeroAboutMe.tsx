@@ -14,19 +14,24 @@ const HeroAboutMe = () => {
       className="flex flex-col gap-[22px] min-h-screen justify-center relative"
       ref={aboutRef}
     >
-      {/* <motion.div
-        className="absolute bottom-16"
+      <motion.div
+        className="absolute bottom-16 -left-16  blur-[2px] opacity-60"
         animate={{
           y: [-20, 20, -20],
-          // rotate: [-10, 10, -10],
+          rotate: [-5, 5, -5],
           transition: {
             repeat: Infinity,
-            duration: 8,
+            duration: 9,
           },
         }}
       >
-        <Image src={Ovni} alt="ovni" className="w-36 h-auto" />
-      </motion.div> */}
+        <Image
+          src={Ovni}
+          alt="ovni"
+          className="w-36 h-auto"
+          draggable={false}
+        />
+      </motion.div>
       <motion.h2
         className="text-[#fb8122] font-semibold text-5xl uppercase"
         initial={{
@@ -64,7 +69,7 @@ const HeroAboutMe = () => {
             delay: 0.6,
           },
         }}
-        className="group text-white/70 font-normal text-2xl hover:text-white transition-colors delay-100 cursor-help"
+        className="group text-white/70 font-normal text-2xl hover:text-white transition-colors delay-100 cursor-help relative z-10"
       >
         <strong className="text-white group-hover:text-[#fb8122] transition-colors delay-100 font-semibold">
           Desarrollador Front End

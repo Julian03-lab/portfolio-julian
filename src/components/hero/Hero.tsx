@@ -6,39 +6,15 @@ import { motion, useInView } from "framer-motion";
 import HeroTextSection from "./HeroTextSection";
 import StarsBg from "@/assets/stars-bg.webp";
 import GradientBg from "@/assets/hero-gradient.webp";
-import StarLight from "@/assets/faststar.png";
 import { MoonIcon } from "../icons/Icons";
 import HeroAboutMe from "./HeroAboutMe";
-import { useRef } from "react";
 import HeroBoard from "./HeroBoard";
 
 const Hero = () => {
   //
 
   return (
-    <motion.section
-      id="about"
-      className="px-28 pt-[61px] h-full w-full bg-gradient-to-br from-[#131428] from-15% via-[#191b42] via-45% to-[#2E349F]"
-      // ref={scrollRef}
-    >
-      {/* <motion.div
-        className="fixed w-[120px] h-0.5 bg-gradient-to-r from-transparent from-40% to-white"
-        animate={{
-          x: [-1000, 2000],
-          y: [-20, 420],
-          transition: {
-            repeat: Infinity,
-            duration: 6,
-            ease: "linear",
-          },
-        }}
-      >
-        <Image
-          src={StarLight}
-          alt="Star Light"
-          className="absolute w-[69px] h-[72px] -rotate-45"
-        /> 
-      </motion.div> */}
+    <motion.section id="about" className="px-28 pt-[61px] h-full w-full">
       <div
         className="relative flex mx-auto max-w-[1440px] bg-contain justify-items-center py-20"
         style={{

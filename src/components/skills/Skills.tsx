@@ -8,7 +8,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="px-28 h-full w-full relative bg-gradient-to-b from-transparent to-[#141824] to-35%"
+      className="px-28 h-full w-full relative bg-gradient-to-b from-transparent to-[#141824] to-35% z-0"
     >
       <div
         className="relative flex flex-col items-center mx-auto max-w-[1440px] bg-contain py-28 bg-repeat-y"
@@ -21,7 +21,7 @@ const Skills = () => {
         <SkillsHard />
         <SkillsSoft />
       </div>
-      <SkillsGradient className="absolute inset-0 w-screen" />
+      <SkillsGradient className="absolute inset-0 w-screen -z-[1]" />
     </section>
   );
 };

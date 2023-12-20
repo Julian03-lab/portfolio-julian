@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import foto_hero from "@/assets/foto_hero.webp";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import HeroTextSection from "./HeroTextSection";
 import StarsBg from "@/assets/stars-bg.webp";
 import GradientBg from "@/assets/hero-gradient.webp";
@@ -14,9 +14,9 @@ const Hero = () => {
   //
 
   return (
-    <motion.section id="about" className="px-28 pt-[61px] h-full w-full">
+    <motion.section id="about" className="px-28 py-20 h-full w-full">
       <div
-        className="relative flex mx-auto max-w-[1440px] bg-contain justify-items-center py-20"
+        className="relative flex mx-auto max-w-[1440px] bg-contain justify-items-center"
         style={{
           backgroundImage: `url(${StarsBg.src})`,
           minHeight: "100vh",

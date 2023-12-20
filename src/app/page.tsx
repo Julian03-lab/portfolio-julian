@@ -1,5 +1,6 @@
 import Hero from "@/components/hero/Hero";
 import NavBar from "@/components/nav/NavBar";
+import Projects from "@/components/projects/Projects";
 import Skills from "@/components/skills/Skills";
 
 export default function Home() {
@@ -7,7 +8,7 @@ export default function Home() {
     <>
       <NavBar />
       <main
-        className="flex min-h-screen flex-col justify-between items-center"
+        className="flex flex-col justify-between items-center w-full"
         style={{
           background:
             "linear-gradient(122deg, #131428 14.89%, #191B42 48.75%, #1E2159 67.46%, #141824 102.04%)",
@@ -15,12 +16,7 @@ export default function Home() {
       >
         <Hero />
         <Skills />
-        <section
-          id="portafolio"
-          className="h-screen grid place-content-center bg-yellow-400 w-full z-10"
-        >
-          Portafolio
-        </section>
+        <Projects />
         <section
           id="testimonios"
           className="h-screen grid place-content-center bg-emerald-400 w-full z-10"

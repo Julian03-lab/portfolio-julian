@@ -46,7 +46,7 @@ const SkillsSoft = () => {
         return (
           <div
             key={softSkill.id}
-            className="max-w-sm flex flex-col text-white font-semibold text-2xl p-3 rounded-xl border-white border relative"
+            className="max-w-sm flex flex-col text-white font-semibold text-2xl p-3 rounded-xl relative"
           >
             <div
               className="absolute -inset-px bg-gradient-to-br from-white to-white/0 rounded-xl"

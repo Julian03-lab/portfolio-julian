@@ -27,11 +27,9 @@ const item = {
 const card = {
   hidden: {
     minHeight: "380px",
-    backgroundColor: "transparent",
   },
   visible: {
     height: "auto",
-    backgroundColor: "rgba(175, 175, 175, 0.5)",
   },
 };
 
@@ -74,12 +72,20 @@ const titleVariants = {
   },
 };
 
-const ProjectCard = () => {
+type ProjectCardProps = {
+  title: string;
+  description: string;
+  tecnologies: JSX.Element[];
+};
+
+const ProjectCard = ({ description, tecnologies, title }: ProjectCardProps) => {
   const [isHover, setIsHover] = useState(false);
 
   return (
     <motion.div
-      className="w-full rounded-xl relative p-9"
+      className={`w-full rounded-xl relative p-9 hover:bg-gradient-to-r hover:from-black/80 hover:to-black/30 transition-colors duration-1000 ${
+        isHover && "bg-gradient-to-r from-black/80 to-black/30"
+      }`}
       initial="hidden"
       variants={card}
       onClick={() => setIsHover(!isHover)}
@@ -90,7 +96,7 @@ const ProjectCard = () => {
         style={{
           backgroundImage: `url(${appBg.src})`,
         }}
-        className="w-full h-full rounded-xl absolute top-0 left-0 -z-10 bg-cover"
+        className="w-full h-full rounded-xl absolute top-0 left-0 -z-10 bg-cover bg-center"
       />
       <motion.div
         variants={logoVariants}
@@ -103,7 +109,7 @@ const ProjectCard = () => {
           variants={titleVariants}
           className="font-bold text-black text-base"
         >
-          ConnectU
+          {title}
         </motion.p>
       </motion.div>
       <motion.div
@@ -111,18 +117,7 @@ const ProjectCard = () => {
         className="flex flex-col gap-8 mt-2.5 max-w-[50%] overflow-hidden"
       >
         <motion.p className="font-medium text-white text-sm" variants={item}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
-          saepe ipsum dolor labore deleniti reiciendis id ducimus dolores
-          impedit, dolore sint officia modi, illum odit voluptates omnis nostrum
-          porro est, delectus dignissimos vitae expedita consequatur iusto ab.
-          Earum eos pariatur at voluptatibus rerum? Nemo enim dicta perferendis
-          sunt in illum, veritatis, minima, eius iste odit fugiat. Ipsa eveniet
-          cupiditate fuga reprehenderit iste laudantium velit maxime, tenetur
-          impedit ratione, necessitatibus illum quae maiores ducimus blanditiis,
-          dicta reiciendis explicabo repudiandae autem laboriosam. Sed iusto
-          accusamus possimus facere, alias cum recusandae! Autem veritatis,
-          fugit sunt esse doloribus alias laboriosam expedita earum voluptas
-          repellendus?
+          {description}
         </motion.p>
         <motion.span className="w-full flex gap-5" variants={item}>
           <button className="text-sm text-black font-bold w-full py-2 rounded-sm bg-white">
@@ -136,9 +131,7 @@ const ProjectCard = () => {
           className="flex gap-5 max-w-full flex-wrap"
           variants={item}
         >
-          <TypescriptIcon className="w-8 h-auto" />
-          <JavascriptIcon className="w-8 h-auto" />
-          <ReactIcon className="w-8 h-auto" />
+          {tecnologies}
         </motion.span>
       </motion.div>
     </motion.div>

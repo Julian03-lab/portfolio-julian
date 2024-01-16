@@ -23,7 +23,7 @@ const HeroBoard = () => {
     {
       id: 1,
       text: "Apasionado de los videojuegos",
-      position: "bottom-[60px] right-[30px] lg:top-[110px] lg:left-[20px]",
+      position: "bottom-[60px] right-[30px] lg:top-[110px] lg:right-[30px]",
       style: {
         rotate: "-5deg",
         scale: 0.9,
@@ -32,7 +32,7 @@ const HeroBoard = () => {
     {
       id: 2,
       text: "Maquetador Web",
-      position: "top-[158px] left-[20px] lg:top-[145px] lg:right-[67px]",
+      position: "top-[158px] left-[20px] lg:top-[145px] lg:left-[107px]",
       style: {
         rotate: "25deg",
         scale: 0.9,
@@ -41,7 +41,7 @@ const HeroBoard = () => {
     {
       id: 3,
       text: "Desarrollador Front End",
-      position: "bottom-[80px] left-[40px] lg:bottom-[300px] lg:left-[35px]",
+      position: "bottom-[80px] left-[40px] lg:bottom-[180px] lg:left-[35px]",
       style: {
         rotate: "13deg",
         scale: 0.9,
@@ -50,7 +50,7 @@ const HeroBoard = () => {
     {
       id: 4,
       text: "1 año de experiencia",
-      position: "top-[160px] right-[30px] lg:top-[250px] lg:right-[260px]",
+      position: "top-[160px] right-[30px] lg:top-[250px] lg:right-[200px]",
       style: {
         rotate: "14deg",
         scale: 0.9,
@@ -68,7 +68,7 @@ const HeroBoard = () => {
     {
       id: 6,
       text: "Desarrollador Mobile",
-      position: "bottom-[220px] left-[45px] lg:bottom-[336px] lg:left-[220px]",
+      position: "bottom-[220px] left-[45px] lg:bottom-[106px] lg:left-[220px]",
       style: {
         rotate: "5deg",
         scale: 0.9,
@@ -96,13 +96,13 @@ const HeroBoard = () => {
           <Image
             src={NamePaper}
             alt="Name Paper"
-            width={300}
-            height={300}
-            className="select-none w-[200px] h-[100px] lg:w-[300px] lg:h-[300px]"
+            // width={300}
+            // height={300}
+            className="select-none w-[200px] h-auto lg:w-[300px] lg:h-auto"
             draggable={false}
           />
           <p
-            className={`text-[#003bd1] text-3xl lg:text-5xl font-medium select-none absolute top-9 lg:top-12 left-9 lg:left-10 rotate-3 transform ${reenieBeanie.className} `}
+            className={`text-[#003bd1] text-3xl lg:text-5xl font-medium select-none absolute top-7 lg:top-12 left-9 lg:left-10 rotate-3 transform ${reenieBeanie.className} `}
           >
             Más sobre mi
           </p>

@@ -11,7 +11,7 @@ const HeroAboutMe = () => {
   });
   return (
     <div
-      className="flex flex-col gap-[22px] min-h-screen justify-center relative"
+      className="flex flex-col gap-4 lg:gap-[22px] min-h-screen justify-center relative items-center lg:items-start"
       ref={aboutRef}
     >
       <motion.div
@@ -33,7 +33,7 @@ const HeroAboutMe = () => {
         />
       </motion.div>
       <motion.h2
-        className="text-[#fb8122] font-semibold text-5xl uppercase"
+        className="text-[#fb8122] font-semibold text-3xl lg:text-5xl uppercase"
         initial={{
           opacity: 0,
           x: -40,
@@ -69,7 +69,7 @@ const HeroAboutMe = () => {
             delay: 0.6,
           },
         }}
-        className="group text-white/70 font-normal text-2xl hover:text-white transition-colors delay-100 cursor-help relative z-10"
+        className="group text-white/70 font-normal lg:text-2xl hover:text-white transition-colors delay-100 cursor-help relative z-10 text-center lg:text-start"
       >
         <strong className="text-white group-hover:text-[#fb8122] transition-colors delay-100 font-semibold">
           Desarrollador Front End

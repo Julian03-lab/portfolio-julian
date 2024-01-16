@@ -14,16 +14,19 @@ const Hero = () => {
   //
 
   return (
-    <motion.section id="about" className="px-28 py-20 h-full w-full">
+    <motion.section
+      id="about"
+      className="px-[30px] lg:px-28 py-7 lg:py-20 h-full w-full"
+    >
       <div
-        className="relative flex mx-auto max-w-[1440px] bg-contain justify-items-center"
+        className="relative flex flex-col lg:flex-row mx-auto lg:max-w-[1440px] bg-contain justify-items-center"
         style={{
           backgroundImage: `url(${StarsBg.src})`,
           minHeight: "100vh",
         }}
       >
-        <div className="flex flex-col pt-8 relative w-full">
-          <motion.div
+        <div className="flex flex-col lg:pt-8 relative w-full">
+          {/*  <motion.div
             className="absolute top-2 right-2"
             initial={{
               rotate: -35,
@@ -38,13 +41,13 @@ const Hero = () => {
             }}
           >
             <MoonIcon />
-          </motion.div>
+          </motion.div> */}
           <HeroTextSection />
           <HeroAboutMe />
           <HeroBoard />
         </div>
         <motion.div
-          className="sticky top-[96px] h-full w-full flex justify-center items-start"
+          className="absolute lg:sticky top-[96px] lg:h-full w-full flex justify-center lg:items-start"
           initial={{
             opacity: 0,
           }}
@@ -59,13 +62,13 @@ const Hero = () => {
             priority
             src={foto_hero}
             alt="Foto Julian Fontana"
-            className="w-[410px] select-none"
+            className="w-48 lg:w-[410px] select-none z-10"
           />
           <Image
             priority
             src={GradientBg}
             alt="Gradient"
-            className="absolute top-12 w-full -z-10 select-none"
+            className="absolute lg:top-12 w-full lg:-z-10 select-none"
           />
         </motion.div>
       </div>

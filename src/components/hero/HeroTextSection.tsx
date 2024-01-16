@@ -47,9 +47,9 @@ const item = {
 
 const HeroTextSection = () => {
   return (
-    <div className="flex gap-2.5 flex-col h-[70vh] justify-between relative">
+    <div className="flex gap-2.5 flex-col h-full lg:h-[70vh] justify-between relative items-center lg:items-start">
       <motion.div
-        className="flex flex-col w-fit gap-5"
+        className="flex flex-col w-fit lg:gap-5"
         initial={{
           opacity: 0,
           x: -40,
@@ -59,18 +59,20 @@ const HeroTextSection = () => {
           x: 0,
         }}
       >
-        <h1 className="text-white font-extrabold text-[10.25rem] leading-[8.125rem]">
-          JULIAN
-        </h1>
-        <h1 className="text-white font-extrabold text-[7.5rem] leading-[5.625rem]">
-          FONTANA
-        </h1>
-        <h2 className="text-[#FB8122] font-semibold text-[3.375rem]">
+        <div className="flex gap-3 lg:flex-col lg:gap-0">
+          <h1 className="text-white font-extrabold text-[2.125rem] lg:text-[10.25rem] leading-normal lg:leading-[8.125rem]">
+            JULIAN
+          </h1>
+          <h1 className="text-white font-extrabold text-[2.125rem] lg:text-[7.5rem] leading-normal lg:leading-[5.625rem]">
+            FONTANA
+          </h1>
+        </div>
+        <h2 className="text-[#FB8122] font-semibold text-xl lg:text-[3.375rem] text-center">
           FRONT END DEVELOPER
         </h2>
       </motion.div>
       <motion.ul
-        className="flex flex-col gap-3 items-start"
+        className="flex flex-col gap-3 items-start mt-[348px] lg:mt-0"
         variants={container}
         initial="hidden"
         animate="visible"
@@ -85,7 +87,7 @@ const HeroTextSection = () => {
             <Link
               href={link.href}
               target="_blank"
-              className="flex gap-2.5 items-center text-white font-semibold text-xl hover:text-[#FB8122] fill-current uppercase"
+              className="flex gap-2.5 items-center text-white font-semibold lg:text-xl hover:text-[#FB8122] fill-current uppercase"
             >
               {link.icon}
               {link.text}
@@ -94,7 +96,7 @@ const HeroTextSection = () => {
         ))}
       </motion.ul>
       <motion.div
-        className="flex flex-row gap-4"
+        className="hidden lg:flex flex-row gap-4"
         initial={{
           opacity: 0,
           y: 40,

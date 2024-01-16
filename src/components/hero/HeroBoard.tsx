@@ -23,9 +23,8 @@ const HeroBoard = () => {
     {
       id: 1,
       text: "Apasionado de los videojuegos",
+      position: "bottom-[60px] right-[30px] lg:top-[110px] lg:left-[20px]",
       style: {
-        top: "110px",
-        left: "20px",
         rotate: "-5deg",
         scale: 0.9,
       },
@@ -33,9 +32,8 @@ const HeroBoard = () => {
     {
       id: 2,
       text: "Maquetador Web",
+      position: "top-[158px] left-[20px] lg:top-[145px] lg:right-[67px]",
       style: {
-        top: "145px",
-        right: "67px",
         rotate: "25deg",
         scale: 0.9,
       },
@@ -43,9 +41,8 @@ const HeroBoard = () => {
     {
       id: 3,
       text: "Desarrollador Front End",
+      position: "bottom-[80px] left-[40px] lg:bottom-[300px] lg:left-[35px]",
       style: {
-        top: "300px",
-        left: "35px",
         rotate: "13deg",
         scale: 0.9,
       },
@@ -53,9 +50,8 @@ const HeroBoard = () => {
     {
       id: 4,
       text: "1 año de experiencia",
+      position: "top-[160px] right-[30px] lg:top-[250px] lg:right-[260px]",
       style: {
-        top: "250px",
-        right: "260px",
         rotate: "14deg",
         scale: 0.9,
       },
@@ -63,9 +59,8 @@ const HeroBoard = () => {
     {
       id: 5,
       text: "Experiencia con React y React Native",
+      position: "top-[360px] right-[46px] lg:bottom-[125px] lg:right-[39px]",
       style: {
-        bottom: "125px",
-        right: "39px",
         rotate: "9deg",
         scale: 0.9,
       },
@@ -73,9 +68,8 @@ const HeroBoard = () => {
     {
       id: 6,
       text: "Desarrollador Mobile",
+      position: "bottom-[220px] left-[45px] lg:bottom-[336px] lg:left-[220px]",
       style: {
-        bottom: "336px",
-        left: "220px",
         rotate: "5deg",
         scale: 0.9,
       },
@@ -83,7 +77,7 @@ const HeroBoard = () => {
   ];
 
   return (
-    <div className="min-h-screen flex items-center">
+    <div className="min-h-screen flex lg:items-center">
       <motion.div
         draggable={false}
         initial={{
@@ -95,7 +89,7 @@ const HeroBoard = () => {
             duration: 0.5,
           },
         }}
-        className="w-full  h-[80%] relative flex flex-col items-center border-white border-[3px]"
+        className="w-full lg:h-[80%] relative flex flex-col items-center border-white border-[3px]"
         ref={constraintsRef}
       >
         <div className="relative" draggable={false}>
@@ -104,11 +98,11 @@ const HeroBoard = () => {
             alt="Name Paper"
             width={300}
             height={300}
-            className="select-none"
+            className="select-none w-[200px] h-[100px] lg:w-[300px] lg:h-[300px]"
             draggable={false}
           />
           <p
-            className={`text-[#003bd1] text-5xl font-medium select-none absolute top-12 left-10 rotate-3 transform ${reenieBeanie.className} `}
+            className={`text-[#003bd1] text-3xl lg:text-5xl font-medium select-none absolute top-9 lg:top-12 left-9 lg:left-10 rotate-3 transform ${reenieBeanie.className} `}
           >
             Más sobre mi
           </p>
@@ -118,6 +112,7 @@ const HeroBoard = () => {
         </p>
         {buttons.map((button) => (
           <HeroBoardPostit
+            position={button.position}
             key={button.id}
             constraintsRef={constraintsRef}
             style={button.style}

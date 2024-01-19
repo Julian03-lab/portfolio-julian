@@ -7,7 +7,7 @@ import Testimonials from "@/components/testimonials/Testimonials";
 export default function Home() {
   return (
     <>
-      {/* <NavBar /> */}
+      <NavBar />
       <main
         className="flex flex-col justify-between items-center w-full"
         style={{
@@ -16,7 +16,7 @@ export default function Home() {
         }}
       >
         <Hero />
-        {/* <Skills /> */}
+        <Skills />
         {/* <Projects /> */}
         {/* <Testimonials /> */}
       </main>

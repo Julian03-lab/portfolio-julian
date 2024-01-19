@@ -41,12 +41,12 @@ const softSkills = [
 ];
 const SkillsSoft = () => {
   return (
-    <div className="grid grid-cols-3 gap-14 mt-28 w-full">
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-14 lg:mt-28 w-full">
       {softSkills.map((softSkill) => {
         return (
           <div
             key={softSkill.id}
-            className="max-w-sm flex flex-col text-white font-semibold text-2xl p-3 rounded-xl relative"
+            className="max-w-sm flex flex-col text-white font-semibold lg:text-2xl p-3 rounded-xl relative"
           >
             <div
               className="absolute -inset-px bg-gradient-to-br from-white to-white/0 rounded-xl"

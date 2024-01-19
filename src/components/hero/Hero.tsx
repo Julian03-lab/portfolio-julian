@@ -26,8 +26,8 @@ const Hero = () => {
         }}
       >
         <div className="flex flex-col lg:pt-8 relative w-full">
-          {/*  <motion.div
-            className="absolute top-2 right-2"
+          <motion.div
+            className="absolute top-28 right-4 lg:top-2 lg:right-2"
             initial={{
               rotate: -35,
             }}
@@ -41,7 +41,7 @@ const Hero = () => {
             }}
           >
             <MoonIcon />
-          </motion.div> */}
+          </motion.div>
           <HeroTextSection />
           <HeroAboutMe />
           <HeroBoard />

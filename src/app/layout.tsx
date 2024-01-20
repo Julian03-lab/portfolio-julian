@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const poppins = Poppins({
   subsets: ["latin-ext"],
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "es_AR",
-    url: "https://portfolio-julian-plum.vercel.app",
+    url: "https://julianfontana.com.ar",
     siteName: "Julian Fontana",
     title: "Julian Fontana - Desarrollador Front End",
     description:
@@ -39,7 +40,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" className="scroll-smooth overflow-x-hidden">
-      <body className={poppins.className}>{children}</body>
+      <body className={poppins.className}>
+        {children}
+        <SpeedInsights />
+      </body>
     </html>
   );
 }

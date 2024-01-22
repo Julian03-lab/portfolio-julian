@@ -24,18 +24,21 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section id="testimonios" className="px-28 h-full w-full relative z-0">
+    <section
+      id="testimonios"
+      className="px-[30px] lg:px-28 h-full w-full relative z-0 py-7 lg:py-20"
+    >
       <div
-        className="relative flex flex-col items-center mx-auto max-w-[1440px] bg-contain py-28 bg-repeat-y"
+        className="relative flex flex-col items-center mx-auto max-w-[1440px] bg-contain bg-repeat-y"
         style={{
           backgroundImage: `url(${StarsBg.src})`,
           minHeight: "100vh",
         }}
       >
-        <h2 className="text-[#fb8122] font-semibold text-5xl mb-16">
+        <h2 className="text-[#fb8122] font-semibold text-3xl lg:text-5xl mb-10 lg:mb-16">
           Testimonios
         </h2>
-        <div className="flex w-full justify-between items-center">
+        <div className="flex flex-col lg:flex-row w-full gap-8 lg:gap-0 lg:justify-between items-center">
           {testimonials.map((testimonial) => (
             <TestimonialCard key={testimonial.id} {...testimonial} />
           ))}

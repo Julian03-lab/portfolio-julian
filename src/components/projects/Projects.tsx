@@ -26,7 +26,7 @@ const myProjects = [
     // image:
   },
   {
-    title: "Portafolio Personal",
+    title: "Nexo",
     description:
       "Lorem ipsum dolor sit amet consectetur. Faucibus parturient lectus euismod vulputate vestibulum. Enim eget aliquam tellus metus gravida tempus pellentesque.Lorem ipsum dolor sit amet consectetur. Faucibus parturient lectus euismod vulputate vestibulum. Enim eget aliquam tellus metus gravida tempus pellentesque Lorem ipsum dolor sit amet consectetur. Faucibus parturient lectus euismod vulputate vestibulum. Enim eget aliquam tellus metus gravida tempus pellentesque.",
     tecnologies: [
@@ -38,19 +38,7 @@ const myProjects = [
     // image:
   },
   {
-    title: "Portafolio Personal",
-    description:
-      "Este es mi portafolio personal, donde muestro mis proyectos y habilidades. Está hecho con NextJS, Framer Motion, TailwindCSS y Typescript.",
-    tecnologies: [
-      <ReactIcon key="react" className="w-8 h-auto" />,
-      <TypescriptIcon key="typescript" className="w-8 h-auto" />,
-      <TailwindIcon key="tailwind" className="w-8 h-auto" />,
-      <NextjsIcon key="nextjs" className="w-8 h-auto" />,
-    ],
-    // image:
-  },
-  {
-    title: "Portafolio Personal",
+    title: "Order My Potions",
     description:
       "Este es mi portafolio personal, donde muestro mis proyectos y habilidades. Está hecho con NextJS, Framer Motion, TailwindCSS y Typescript.",
     tecnologies: [
@@ -65,7 +53,10 @@ const myProjects = [
 
 const Projects = () => {
   return (
-    <section id="portafolio" className="px-28 h-full w-full relative z-0">
+    <section
+      id="portafolio"
+      className="px-28 h-full w-full relative z-0 bg-gradient-to-b from-[#141824] via-[#0F104D] to-[#18162A]"
+    >
       <div
         className="relative flex flex-col items-center mx-auto max-w-[1440px] bg-contain py-28 bg-repeat-y"
         style={{

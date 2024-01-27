@@ -72,7 +72,7 @@ const HeroAboutMe = () => {
         className="group text-white/70 font-normal lg:text-2xl hover:text-white transition-colors delay-100 cursor-help relative z-10 text-center lg:text-start"
       >
         <strong className="text-white group-hover:text-[#fb8122] transition-colors delay-100 font-semibold">
-          Desarrollador Front End
+          Desarrollador Front End y Mobile
         </strong>
         , apasionado y creativo,{" "}
         <strong className="text-white group-hover:text-[#fb8122] transition-colors delay-100 font-semibold">

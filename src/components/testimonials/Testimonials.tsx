@@ -26,13 +26,13 @@ const Testimonials = () => {
   return (
     <section
       id="testimonios"
-      className="px-[30px] lg:px-28 h-full w-full relative z-0 py-7 lg:py-20"
+      className="px-[30px] lg:px-28 h-full w-full relative z-0 py-7 lg:py-20 bg-[#18162A]"
     >
       <div
         className="relative flex flex-col items-center mx-auto max-w-[1440px] bg-contain bg-repeat-y"
         style={{
           backgroundImage: `url(${StarsBg.src})`,
-          minHeight: "100vh",
+          // minHeight: "100vh",
         }}
       >
         <h2 className="text-[#fb8122] font-semibold text-3xl lg:text-5xl mb-10 lg:mb-16">

@@ -68,7 +68,7 @@ const titleVariants = {
   },
   visible: {
     color: "white",
-    marginTop: 30,
+    // marginTop: 30,
   },
 };
 
@@ -100,14 +100,14 @@ const ProjectCard = ({ description, tecnologies, title }: ProjectCardProps) => {
       />
       <motion.div
         variants={logoVariants}
-        className="flex flex-col rounded-xl w-fit items-center relative"
+        className="flex flex-col rounded-xl w-36 items-center relative justify-center"
       >
         <div className="bg-[#EC9A59] p-2 w-fit rounded-xl">
           <ConnectULogo className="w-6 h-auto " />
         </div>
         <motion.p
           variants={titleVariants}
-          className="font-bold text-black text-base"
+          className="font-bold text-black text-base text-center"
         >
           {title}
         </motion.p>

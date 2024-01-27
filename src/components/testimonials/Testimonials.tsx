@@ -10,9 +10,9 @@ const testimonials = [
   },
   {
     id: 2,
-    name: "MaCa Carbi",
-    title: "Fundadora de EN-CONEXION",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+    name: "Gilca Terrazas",
+    title: "SmartWater",
+    text: "Trabajar con Julian fue muy agradable, el es muy amable y profesional, atento y colaborador, muy eficiente, lo recomiento 100%",
   },
   {
     id: 3,
@@ -38,7 +38,7 @@ const Testimonials = () => {
         <h2 className="text-[#fb8122] font-semibold text-3xl lg:text-5xl mb-10 lg:mb-16">
           Testimonios
         </h2>
-        <div className="flex flex-col lg:flex-row w-full gap-8 lg:gap-0 lg:justify-between items-center">
+        <div className="flex flex-col lg:flex-row w-full gap-8 lg:gap-0 lg:justify-between items-start">
           {testimonials.map((testimonial) => (
             <TestimonialCard key={testimonial.id} {...testimonial} />
           ))}

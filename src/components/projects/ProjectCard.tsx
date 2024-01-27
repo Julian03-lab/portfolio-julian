@@ -83,7 +83,7 @@ const ProjectCard = ({ description, tecnologies, title }: ProjectCardProps) => {
 
   return (
     <motion.div
-      className={`w-full rounded-xl relative p-9 hover:bg-gradient-to-r hover:from-black/80 hover:to-black/30 transition-colors duration-1000 ${
+      className={`w-full rounded-xl relative p-5 lg:p-9 hover:bg-gradient-to-r hover:from-black/80 hover:to-black/30 transition-colors duration-1000 ${
         isHover && "bg-gradient-to-r from-black/80 to-black/30"
       }`}
       initial="hidden"
@@ -114,18 +114,24 @@ const ProjectCard = ({ description, tecnologies, title }: ProjectCardProps) => {
       </motion.div>
       <motion.div
         variants={paragraphVariants}
-        className="flex flex-col gap-8 mt-2.5 max-w-[50%] overflow-hidden"
+        className="flex flex-col gap-8 mt-2.5 lg:max-w-[50%] overflow-hidden"
       >
         <motion.p className="font-medium text-white text-sm" variants={item}>
           {description}
         </motion.p>
         <motion.span className="w-full flex gap-5" variants={item}>
-          <button className="text-sm text-black font-bold w-full py-2 rounded-sm bg-white">
+          <a
+            className="text-xs text-black font-bold w-full p-1 lg:py-2 rounded-sm bg-white lg:text-sm text-center"
+            href="google.com"
+          >
             Prueba
-          </button>
-          <button className="text-sm text-black font-bold w-full py-2 rounded-sm bg-white">
+          </a>
+          <a
+            className="text-xs text-black font-bold w-full p-1 lg:py-2 rounded-sm bg-white lg:text-sm text-center"
+            href="google.com"
+          >
             Codigo
-          </button>
+          </a>
         </motion.span>
         <motion.span
           className="flex gap-5 max-w-full flex-wrap"

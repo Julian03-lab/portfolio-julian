@@ -1,11 +1,12 @@
-"use client";
-
 import StarsBg from "@/assets/stars-bg.webp";
 import Image from "next/image";
 import foto_projects from "@/assets/foto_projects.webp";
+import Project2Photo from "@/assets/projects_images/order-potions.webp";
+import Project3Photo from "@/assets/projects_images/charlas-breves.webp";
 import GradientBg from "@/assets/hero-gradient.webp";
 import ProjectCard from "./ProjectCard";
 import {
+  AstroIcon,
   NextjsIcon,
   ReactIcon,
   TailwindIcon,
@@ -14,40 +15,41 @@ import {
 
 const myProjects = [
   {
-    title: "Portafolio Personal",
-    description:
-      "Este es mi portafolio personal, donde muestro mis proyectos y habilidades. Está hecho con NextJS, Framer Motion, TailwindCSS y Typescript.",
-    tecnologies: [
-      <ReactIcon key="react" className="w-8 h-auto" />,
-      <TypescriptIcon key="typescript" className="w-8 h-auto" />,
-      <TailwindIcon key="tailwind" className="w-8 h-auto" />,
-      <NextjsIcon key="nextjs" className="w-8 h-auto" />,
-    ],
-    // image:
-  },
-  {
     title: "Nexo",
     description:
       "Lorem ipsum dolor sit amet consectetur. Faucibus parturient lectus euismod vulputate vestibulum. Enim eget aliquam tellus metus gravida tempus pellentesque.Lorem ipsum dolor sit amet consectetur. Faucibus parturient lectus euismod vulputate vestibulum. Enim eget aliquam tellus metus gravida tempus pellentesque Lorem ipsum dolor sit amet consectetur. Faucibus parturient lectus euismod vulputate vestibulum. Enim eget aliquam tellus metus gravida tempus pellentesque.",
     tecnologies: [
       <ReactIcon key="react" className="w-8 h-auto" />,
       <TypescriptIcon key="typescript" className="w-8 h-auto" />,
-      <TailwindIcon key="tailwind" className="w-8 h-auto" />,
-      <NextjsIcon key="nextjs" className="w-8 h-auto" />,
     ],
     // image:
+    repository: "https://github.com/Julian03-lab/nexo-app",
   },
   {
     title: "Order My Potions",
     description:
-      "Este es mi portafolio personal, donde muestro mis proyectos y habilidades. Está hecho con NextJS, Framer Motion, TailwindCSS y Typescript.",
+      "Juego realizado para la React Jam, donde el objetivo es encontrar las combinaciones correctas. El juego fue hecho en 10 dias, utilizando Rune como plataforma Hecho con React, Typescript y TailwindCSS.",
     tecnologies: [
       <ReactIcon key="react" className="w-8 h-auto" />,
       <TypescriptIcon key="typescript" className="w-8 h-auto" />,
       <TailwindIcon key="tailwind" className="w-8 h-auto" />,
-      <NextjsIcon key="nextjs" className="w-8 h-auto" />,
     ],
-    // image:
+    image: Project2Photo,
+    play: "https://app.rune.ai/dev-tyvWjvGq",
+    repository: "https://github.com/Julian03-lab/orden-my-potions-game",
+  },
+  {
+    title: "Charlas Breves Landing Page",
+    description:
+      "Landing page para el proyecto Charlas Breves, donde el objetivo es conectar a personas con charlas de 5 minutos integrado con un sistema de calendario utilizando Calendly. Hecho con Astro, React, Typescript y TailwindCSS.",
+    tecnologies: [
+      <AstroIcon key="astro" className="w-8 h-auto" />,
+      <ReactIcon key="react" className="w-8 h-auto" />,
+      <TypescriptIcon key="typescript" className="w-8 h-auto" />,
+      <TailwindIcon key="tailwind" className="w-8 h-auto" />,
+    ],
+    image: Project3Photo,
+    play: "https://landing.en-conexion.com/?name=julian",
   },
 ];
 
@@ -58,7 +60,7 @@ const Projects = () => {
       className="px-[30px] lg:px-28 h-full w-full relative z-0 bg-gradient-to-b from-[#141824] via-[#0F104D] to-[#18162A]"
     >
       <div
-        className="relative flex flex-col items-center mx-auto max-w-[1440px] bg-contain py-28 bg-repeat-y gap-48 lg:gap-0"
+        className="relative flex flex-col items-center mx-auto max-w-[1440px] bg-contain py-28 bg-repeat-y gap-48 lg:gap-20"
         style={{
           backgroundImage: `url(${StarsBg.src})`,
           // minHeight: "100vh",

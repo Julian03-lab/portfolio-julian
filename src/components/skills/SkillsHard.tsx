@@ -51,16 +51,6 @@ const Technologies = [
     icon: <JavascriptIcon className={IconStyle} />,
   },
   {
-    id: 7,
-    name: "GitHub",
-    icon: <GithubIcon className={IconStyle} />,
-  },
-  {
-    id: 8,
-    name: "Figma",
-    icon: <FigmaIcon className={IconStyle} />,
-  },
-  {
     id: 9,
     name: "Supabase",
     icon: <SupabaseIcon className={IconStyle} />,
@@ -86,20 +76,10 @@ const Technologies = [
     icon: <MaterialUIIcon className={IconStyle} />,
   },
   {
-    id: 14,
-    name: "Visual Studio Code",
-    icon: <VisualStudioCodeIcon className={IconStyle} />,
-  },
-  {
     id: 15,
     name: "Boostrap",
     icon: <BoostrapIcon className={IconStyle} />,
   },
-  // {
-  //   id: 16,
-  //   name: "Zustand",
-  //   icon: <BoostrapIcon className={IconStyle} />,
-  // },
   {
     id: 17,
     name: "Astro",

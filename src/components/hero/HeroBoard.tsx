@@ -49,7 +49,7 @@ const HeroBoard = () => {
     },
     {
       id: 4,
-      text: "1 año de experiencia",
+      text: "Autodidacta",
       position: "top-[160px] right-[30px] lg:top-[250px] lg:right-[200px]",
       style: {
         rotate: "14deg",

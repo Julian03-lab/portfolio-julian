@@ -41,7 +41,7 @@ const NavBar = () => {
         </li>
       </ul>
       <Link
-        href=""
+        href="#contacto"
         className="font-normal text-lg bg-[#ffff] text-black block px-7 py-4"
       >
         Contactarme

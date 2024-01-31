@@ -1,7 +1,5 @@
-import { SVGProps, useState } from "react";
-import appBg from "@/assets/projects_images/conectU.webp";
-import { JavascriptIcon, ReactIcon, TypescriptIcon } from "../icons/Icons";
-import { motion } from "framer-motion";
+import { SVGProps } from "react";
+import { StaticImageData } from "next/image";
 
 const ConnectULogo = (props: SVGProps<SVGSVGElement>) => (
   <svg
@@ -19,128 +17,64 @@ const ConnectULogo = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
-const item = {
-  visible: { opacity: 1, x: 0 },
-  hidden: { opacity: 0, x: -20 },
-};
-
-const card = {
-  hidden: {
-    minHeight: "380px",
-  },
-  visible: {
-    height: "auto",
-  },
-};
-
-const paragraphVariants = {
-  hidden: {
-    height: 0,
-  },
-  visible: {
-    height: "auto",
-    transition: {
-      delayChildren: 0.5,
-      staggerChildren: 0.3,
-    },
-  },
-};
-
-const logoVariants = {
-  hidden: {
-    background: "white",
-    y: 100,
-    x: 44,
-    padding: 20,
-  },
-  visible: {
-    background: "transparent",
-    y: 0,
-    x: 0,
-    padding: 0,
-  },
-};
-
-const titleVariants = {
-  hidden: {
-    color: "black",
-    marginTop: 10,
-  },
-  visible: {
-    color: "white",
-    // marginTop: 30,
-  },
-};
-
 type ProjectCardProps = {
   title: string;
   description: string;
   tecnologies: JSX.Element[];
+  image?: StaticImageData;
+  play?: string;
+  repository?: string;
 };
 
-const ProjectCard = ({ description, tecnologies, title }: ProjectCardProps) => {
-  const [isHover, setIsHover] = useState(false);
-
+const ProjectCard = ({
+  description,
+  tecnologies,
+  title,
+  image,
+  play,
+  repository,
+}: ProjectCardProps) => {
   return (
-    <motion.div
-      className={`w-full rounded-xl relative p-5 lg:p-9 hover:bg-gradient-to-r hover:from-black/80 hover:to-black/30 transition-colors duration-1000 ${
-        isHover && "bg-gradient-to-r from-black/80 to-black/30"
-      }`}
-      initial="hidden"
-      variants={card}
-      onClick={() => setIsHover(!isHover)}
-      animate={isHover ? "visible" : "hidden"}
-      whileHover={"visible"}
+    <div
+      className={`w-full rounded-xl relative p-5 lg:p-9 bg-gradient-to-r from-black/85 from-35% to-black/60 to-95%`}
     >
       <div
         style={{
-          backgroundImage: `url(${appBg.src})`,
+          backgroundImage: image && `url(${image.src})`,
         }}
         className="w-full h-full rounded-xl absolute top-0 left-0 -z-10 bg-cover bg-center"
       />
-      <motion.div
-        variants={logoVariants}
-        className="flex flex-col rounded-xl w-36 items-center relative justify-center"
-      >
-        <div className="bg-[#EC9A59] p-2 w-fit rounded-xl">
+      <div className="flex flex-col rounded-xl items-start relative justify-center">
+        {/* <div className="bg-[#EC9A59] p-2 w-fit rounded-xl">
           <ConnectULogo className="w-6 h-auto " />
-        </div>
-        <motion.p
-          variants={titleVariants}
-          className="font-bold text-black text-base text-center"
-        >
+        </div> */}
+        <p className="font-bold text-white text-base md:text-xl text-center mt-8">
           {title}
-        </motion.p>
-      </motion.div>
-      <motion.div
-        variants={paragraphVariants}
-        className="flex flex-col gap-8 mt-2.5 lg:max-w-[50%] overflow-hidden"
-      >
-        <motion.p className="font-medium text-white text-sm" variants={item}>
-          {description}
-        </motion.p>
-        <motion.span className="w-full flex gap-5" variants={item}>
-          <a
-            className="text-xs text-black font-bold w-full p-1 lg:py-2 rounded-sm bg-white lg:text-sm text-center"
-            href="google.com"
-          >
-            Prueba
-          </a>
-          <a
-            className="text-xs text-black font-bold w-full p-1 lg:py-2 rounded-sm bg-white lg:text-sm text-center"
-            href="google.com"
-          >
-            Codigo
-          </a>
-        </motion.span>
-        <motion.span
-          className="flex gap-5 max-w-full flex-wrap"
-          variants={item}
-        >
-          {tecnologies}
-        </motion.span>
-      </motion.div>
-    </motion.div>
+        </p>
+      </div>
+      <div className="flex flex-col gap-8 mt-2.5 lg:max-w-[50%] overflow-hidden">
+        <p className="font-medium text-white text-sm">{description}</p>
+        <span className="w-full flex gap-5">
+          {play && (
+            <a
+              className="text-xs text-black font-bold w-full p-1 lg:py-2 rounded-sm bg-white lg:text-sm text-center"
+              href={play}
+            >
+              Prueba
+            </a>
+          )}
+          {repository && (
+            <a
+              className="text-xs text-black font-bold w-full p-1 lg:py-2 rounded-sm bg-white lg:text-sm text-center"
+              href={repository}
+            >
+              Codigo
+            </a>
+          )}
+        </span>
+        <span className="flex gap-5 max-w-full flex-wrap">{tecnologies}</span>
+      </div>
+    </div>
   );
 };
 

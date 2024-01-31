@@ -11,7 +11,7 @@ const Skills = () => {
       className="px-[30px] lg:px-28 h-full w-full relative bg-gradient-to-b from-transparent to-[#141824] to-35% z-0 overflow-hidden"
     >
       <div
-        className="relative flex flex-col items-center mx-auto max-w-[1440px] bg-contain py-12 lg:py-28 bg-repeat-y gap-10 lg:gap-0"
+        className="relative flex flex-col items-center mx-auto max-w-[1440px] bg-contain py-12 lg:py-28 bg-repeat-y gap-10 lg:gap-20"
         style={{
           backgroundImage: `url(${StarsBg.src})`,
           minHeight: "100vh",

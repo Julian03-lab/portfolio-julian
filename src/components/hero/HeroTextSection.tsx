@@ -8,13 +8,14 @@ const links = [
   {
     id: 1,
     text: "Descargar cv",
-    href: "",
+    href: "Julian Fontana Curriculum.pdf",
     icon: <DownloadIcon />,
+    download: true,
   },
   {
     id: 2,
     text: "Contactarme",
-    href: "",
+    href: "#contacto",
     icon: <MailIcon />,
   },
   {
@@ -22,6 +23,7 @@ const links = [
     text: "Ver codigo fuente",
     href: "https://github.com/Julian03-lab/portfolio-julian",
     icon: <ConsoleIcon />,
+    target: true,
   },
 ];
 
@@ -86,7 +88,8 @@ const HeroTextSection = () => {
           >
             <Link
               href={link.href}
-              target="_blank"
+              target={link.target ? "_blank" : "_self"}
+              download={link.download}
               className="flex gap-2.5 items-center text-white font-semibold lg:text-xl hover:text-[#FB8122] fill-current uppercase"
             >
               {link.icon}

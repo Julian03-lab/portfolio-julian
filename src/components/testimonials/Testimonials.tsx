@@ -2,24 +2,24 @@ import StarsBg from "@/assets/stars-bg.webp";
 import TestimonialCard from "./TestimonialCard";
 
 const testimonials = [
-  {
-    id: 1,
-    name: "MaCa Carbi",
-    title: "Fundadora de EN-CONEXION",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-  },
+  // {
+  //   id: 1,
+  //   name: "MaCa Carbi",
+  //   title: "Fundadora de EN-CONEXION",
+  //   text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+  // },
   {
     id: 2,
     name: "Gilca Terrazas",
     title: "SmartWater",
     text: "Trabajar con Julian fue muy agradable, el es muy amable y profesional, atento y colaborador, muy eficiente, lo recomiento 100%",
   },
-  {
-    id: 3,
-    name: "MaCa Carbi",
-    title: "Fundadora de EN-CONEXION",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-  },
+  // {
+  //   id: 3,
+  //   name: "MaCa Carbi",
+  //   title: "Fundadora de EN-CONEXION",
+  //   text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+  // },
 ];
 
 const Testimonials = () => {

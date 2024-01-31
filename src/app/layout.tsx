@@ -10,6 +10,9 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
+  icons: {
+    icon: "/icon.png",
+  },
   title: "Julian Fontana - Desarrollador Front End",
   description:
     "Desarrollador Front End con experiencia en React y React Native. Actualmente trabajando en proyectos personales y colaborando en proyectos Open Source.",

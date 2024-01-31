@@ -6,37 +6,31 @@ const softSkills = [
     id: 1,
     title: "Resolución de problemas",
     description:
-      "Capacidad para analizar y resolver eficazmente situaciones complejas. ",
+      "Capacidad para analizar y resolver eficazmente situaciones complejas.",
   },
   {
     id: 2,
-    title: "Resolución de problemas",
+    title: "Aprendizaje continuo",
     description:
-      "Capacidad para analizar y resolver eficazmente situaciones complejas. ",
+      "Motivación constante para mantenerse actualizado en nuevas tecnologías y lenguajes de programación.",
   },
   {
     id: 3,
-    title: "Resolución de problemas",
+    title: "Adaptabilidad",
     description:
-      "Capacidad para analizar y resolver eficazmente situaciones complejas. ",
+      "Capacidad para prosperar en entornos cambiantes y adaptarse según sea necesario.",
   },
   {
     id: 4,
-    title: "Resolución de problemas",
+    title: "Pasión por la tecnología",
     description:
-      "Capacidad para analizar y resolver eficazmente situaciones complejas. ",
+      "Fuerte motivación y entusiasmo por el campo de la programación y la tecnología.",
   },
   {
     id: 5,
-    title: "Resolución de problemas",
+    title: "Responsabilidad",
     description:
-      "Capacidad para analizar y resolver eficazmente situaciones complejas. ",
-  },
-  {
-    id: 6,
-    title: "Resolución de problemas",
-    description:
-      "Capacidad para analizar y resolver eficazmente situaciones complejas. ",
+      "Compromiso para asumir la responsabilidad de las tareas, cumplir los plazos y alcanzar los objetivos fijados",
   },
 ];
 const SkillsSoft = () => {

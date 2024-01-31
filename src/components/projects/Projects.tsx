@@ -14,17 +14,17 @@ import {
 } from "../icons/Icons";
 
 const myProjects = [
-  {
-    title: "Nexo",
-    description:
-      "Lorem ipsum dolor sit amet consectetur. Faucibus parturient lectus euismod vulputate vestibulum. Enim eget aliquam tellus metus gravida tempus pellentesque.Lorem ipsum dolor sit amet consectetur. Faucibus parturient lectus euismod vulputate vestibulum. Enim eget aliquam tellus metus gravida tempus pellentesque Lorem ipsum dolor sit amet consectetur. Faucibus parturient lectus euismod vulputate vestibulum. Enim eget aliquam tellus metus gravida tempus pellentesque.",
-    tecnologies: [
-      <ReactIcon key="react" className="w-8 h-auto" />,
-      <TypescriptIcon key="typescript" className="w-8 h-auto" />,
-    ],
-    // image:
-    repository: "https://github.com/Julian03-lab/nexo-app",
-  },
+  // {
+  //   title: "Nexo",
+  //   description:
+  //     "Lorem ipsum dolor sit amet consectetur. Faucibus parturient lectus euismod vulputate vestibulum. Enim eget aliquam tellus metus gravida tempus pellentesque.Lorem ipsum dolor sit amet consectetur. Faucibus parturient lectus euismod vulputate vestibulum. Enim eget aliquam tellus metus gravida tempus pellentesque Lorem ipsum dolor sit amet consectetur. Faucibus parturient lectus euismod vulputate vestibulum. Enim eget aliquam tellus metus gravida tempus pellentesque.",
+  //   tecnologies: [
+  //     <ReactIcon key="react" className="w-8 h-auto" />,
+  //     <TypescriptIcon key="typescript" className="w-8 h-auto" />,
+  //   ],
+  //   // image:
+  //   repository: "https://github.com/Julian03-lab/nexo-app",
+  // },
   {
     title: "Order My Potions",
     description:

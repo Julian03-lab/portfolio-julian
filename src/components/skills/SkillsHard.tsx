@@ -62,12 +62,12 @@ const Technologies = [
   },
   {
     id: 11,
-    name: "HTML",
+    name: "CSS",
     icon: <HTMLIcon className={IconStyle} />,
   },
   {
     id: 12,
-    name: "CSS",
+    name: "HTML",
     icon: <CssIcon className={IconStyle} />,
   },
   {

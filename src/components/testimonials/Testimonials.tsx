@@ -2,24 +2,24 @@ import StarsBg from "@/assets/stars-bg.webp";
 import TestimonialCard from "./TestimonialCard";
 
 const testimonials = [
-  // {
-  //   id: 1,
-  //   name: "MaCa Carbi",
-  //   title: "Fundadora de EN-CONEXION",
-  //   text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-  // },
+  {
+    id: 1,
+    name: "Maximiliano Francesconi",
+    //  title: "Fundadora de EN-CONEXION",
+    text: "Trabajar con julian fue una experiencia muy copada, es una persona responsable, que trabaja muy rapido y cumple con todas las expectativas que se espera tanto en una aplicacion o pagina web.Yo lo recomiendo mucho para el trabajo en equipo ;)",
+  },
   {
     id: 2,
     name: "Gilca Terrazas",
     title: "SmartWater",
     text: "Trabajar con Julian fue muy agradable, el es muy amable y profesional, atento y colaborador, muy eficiente, lo recomiento 100%",
   },
-  // {
-  //   id: 3,
-  //   name: "MaCa Carbi",
-  //   title: "Fundadora de EN-CONEXION",
-  //   text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-  // },
+  {
+    id: 3,
+    name: "Dilys Doria",
+    title: "Diseñadora UX/UI",
+    text: "He Trabajado en equipo con Julián  desde hace más de un año en distintos proyectos, Julián es: didáctico, divertido, fluido y profesional, Lo recomiendo ya que es una persona comprometida y responsable con el trabajo.",
+  },
 ];
 
 const Testimonials = () => {

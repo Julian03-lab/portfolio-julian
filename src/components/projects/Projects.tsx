@@ -14,17 +14,17 @@ import {
 } from "../icons/Icons";
 
 const myProjects = [
-  // {
-  //   title: "Nexo",
-  //   description:
-  //     "Lorem ipsum dolor sit amet consectetur. Faucibus parturient lectus euismod vulputate vestibulum. Enim eget aliquam tellus metus gravida tempus pellentesque.Lorem ipsum dolor sit amet consectetur. Faucibus parturient lectus euismod vulputate vestibulum. Enim eget aliquam tellus metus gravida tempus pellentesque Lorem ipsum dolor sit amet consectetur. Faucibus parturient lectus euismod vulputate vestibulum. Enim eget aliquam tellus metus gravida tempus pellentesque.",
-  //   tecnologies: [
-  //     <ReactIcon key="react" className="w-8 h-auto" />,
-  //     <TypescriptIcon key="typescript" className="w-8 h-auto" />,
-  //   ],
-  //   // image:
-  //   repository: "https://github.com/Julian03-lab/nexo-app",
-  // },
+  {
+    title: "Nexo",
+    description:
+      "Nexo es una aplicacion para estudiantes y reclutadores. donde el modulo estudiantes muestra informacion de carreras tecnologicas y rubros IT para que los estudiantes o interesados tengan un lugar donde averiguar sobre estos temas, y el modulo de reclutador es para que los reclutadores realicen gestiones a los perfiles que soliciten trabajo una manera mas efectiva.",
+    tecnologies: [
+      <ReactIcon key="react" className="w-8 h-auto" />,
+      <TypescriptIcon key="typescript" className="w-8 h-auto" />,
+    ],
+    // image:
+    repository: "https://github.com/Julian03-lab/nexo-app",
+  },
   {
     title: "Order My Potions",
     description:

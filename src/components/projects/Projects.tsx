@@ -60,7 +60,7 @@ const Projects = () => {
       className="px-[30px] lg:px-28 h-full w-full relative z-0 bg-gradient-to-b from-[#141824] via-[#0F104D] to-[#18162A]"
     >
       <div
-        className="relative flex flex-col items-center mx-auto max-w-[1440px] bg-contain py-28 bg-repeat-y gap-48 lg:gap-20"
+        className="relative flex flex-col items-center mx-auto max-w-[1440px] bg-contain py-28 bg-repeat-y gap-48 md:gap-20"
         style={{
           backgroundImage: `url(${StarsBg.src})`,
           // minHeight: "100vh",
@@ -70,18 +70,18 @@ const Projects = () => {
           Proyectos
         </h2>
         <div className="flex w-full">
-          <div className="absolute lg:sticky -left-32 top-11 lg:top-[96px] lg:h-full w-full flex justify-center items-start">
+          <div className="absolute lg:sticky -left-32 top-11 lg:top-[96px] lg:h-full w-full justify-center items-start flex md:hidden lg:flex">
             <Image
               priority
               src={foto_projects}
               alt="Foto Julian Fontana"
-              className="w-[142px] lg:w-[410px] select-none"
+              className="w-[142px] lg:w-80 xl:w-[410px] select-none"
             />
             <Image
               priority
               src={GradientBg}
               alt="Gradient"
-              className="absolute left-0 w-full -z-10 select-none"
+              className="absolute left-0  w-full -z-10 select-none"
             />
           </div>
           <div className="w-full h-full flex flex-col gap-16">

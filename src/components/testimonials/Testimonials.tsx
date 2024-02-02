@@ -38,7 +38,7 @@ const Testimonials = () => {
         <h2 className="text-[#fb8122] font-semibold text-3xl lg:text-5xl mb-10 lg:mb-16">
           Testimonios
         </h2>
-        <div className="flex flex-col lg:flex-row w-full gap-8 lg:gap-0 lg:justify-between items-start">
+        <div className="flex flex-col lg:flex-row w-full gap-8 lg:gap-10 items-start">
           {testimonials.map((testimonial) => (
             <TestimonialCard key={testimonial.id} {...testimonial} />
           ))}

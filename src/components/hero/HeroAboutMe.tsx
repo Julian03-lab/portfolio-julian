@@ -43,7 +43,7 @@ const HeroAboutMe = () => {
           x: inView ? 0 : -40,
         }}
       >
-        Quien Soy?
+        ¿Quién Soy?
       </motion.h2>
       <motion.div
         className="h-0.5 bg-gradient-to-r from-white from-30% to-transparent to-70%"

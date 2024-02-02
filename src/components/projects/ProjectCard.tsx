@@ -59,6 +59,7 @@ const ProjectCard = ({
             <a
               className="text-xs text-black font-bold w-full p-1 lg:py-2 rounded-sm bg-white lg:text-sm text-center"
               href={play}
+              target="_blank"
             >
               Prueba
             </a>
@@ -67,6 +68,7 @@ const ProjectCard = ({
             <a
               className="text-xs text-black font-bold w-full p-1 lg:py-2 rounded-sm bg-white lg:text-sm text-center"
               href={repository}
+              target="_blank"
             >
               Codigo
             </a>

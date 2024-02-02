@@ -17,7 +17,7 @@ import {
   VisualStudioCodeIcon,
 } from "../icons/Icons";
 
-const IconStyle = "w-[32px] lg:w-[60px] h-auto lg:py-4";
+const IconStyle = "w-[32px] md:w-[60px] h-auto md:py-4";
 
 const Technologies = [
   {
@@ -89,12 +89,15 @@ const Technologies = [
 
 const SkillsHard = () => {
   return (
-    <div className="w-full grid grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-0">
+    <div className="w-full grid grid-cols-2 lg:grid-cols-3 gap-6 md:gap-0">
       {Technologies.map((tech) => (
-        <div key={tech.id} className="flex items-center gap-2 lg:gap-10">
-          <div className="h-full w-px bg-white hidden lg:block" />
+        <div
+          key={tech.id}
+          className="flex items-center gap-2 md:gap-8 xl:gap-10"
+        >
+          <div className="h-full w-px bg-white hidden md:block" />
           {tech.icon}
-          <p className="font-semibold text-white text-xs lg:text-2xl">
+          <p className="font-semibold text-white text-xs md:text-2xl">
             {tech.name}
           </p>
         </div>

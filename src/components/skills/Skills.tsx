@@ -14,14 +14,14 @@ const Skills = () => {
         className="relative flex flex-col items-center mx-auto max-w-[1440px] bg-contain py-12 lg:py-28 bg-repeat-y gap-10 lg:gap-20"
         style={{
           backgroundImage: `url(${StarsBg.src})`,
-          minHeight: "100vh",
+          // minHeight: "100vh",
         }}
       >
         <h2 className="text-[#fb8122] font-semibold text-3xl lg:text-5xl">
           Skills
         </h2>
         <SkillsHard />
-        <SkillsSoft />
+        {/* <SkillsSoft /> */}
       </div>
       <SkillsGradient className="absolute inset-0 w-screen -z-[1] h-full" />
     </section>

@@ -24,7 +24,7 @@ const HeroBoardPostit = ({
 }: HeroBoardPostitProps) => {
   return (
     <motion.button
-      className={`absolute text-[#141824] text-xs lg:text-lg text-center cursor-grab w-[97px] h-[97px] lg:w-[132px] lg:h-[132px] bg-gradient-to-bl from-[#FFF460] from-45% to-90% to-[#FFF789] shadow-lg p-2 ${position}`}
+      className={`absolute text-[#141824] text-xs xl:text-lg text-center cursor-grab w-[97px] h-[97px] xl:w-[132px] xl:h-[132px] bg-gradient-to-bl from-[#FFF460] from-45% to-90% to-[#FFF789] shadow-lg p-2 ${position}`}
       style={style}
       drag
       dragConstraints={constraintsRef}

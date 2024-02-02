@@ -1,8 +1,11 @@
 import React from "react";
 import ScrollDownIcon from "../icons/ScrollDownIcon";
 import { motion } from "framer-motion";
-import { ConsoleIcon, DownloadIcon, MailIcon, MoonIcon } from "../icons/Icons";
+import { ConsoleIcon, DownloadIcon, MailIcon } from "../icons/Icons";
 import Link from "next/link";
+import Image from "next/image";
+import GradientBg from "@/assets/hero-gradient.webp";
+import foto_hero from "@/assets/foto_hero.webp";
 
 const links = [
   {
@@ -49,7 +52,7 @@ const item = {
 
 const HeroTextSection = () => {
   return (
-    <div className="flex gap-2.5 flex-col h-full lg:h-[70vh] justify-between relative items-center lg:items-start">
+    <div className="flex flex-col h-[90vh] md:h-full md:gap-10 lg:gap-0 lg:h-[70vh] justify-between relative items-center md:items-start">
       <motion.div
         className="flex flex-col w-fit lg:gap-5"
         initial={{
@@ -61,20 +64,45 @@ const HeroTextSection = () => {
           x: 0,
         }}
       >
-        <div className="flex gap-3 lg:flex-col lg:gap-0">
-          <h1 className="text-white font-extrabold text-[2.125rem] lg:text-[10.25rem] leading-normal lg:leading-[8.125rem]">
+        <div className="flex gap-3 md:flex-col md:gap-0">
+          <h1 className="text-white font-extrabold text-[2.125rem] lg:text-8xl xl:text-[10.25rem] leading-normal xl:leading-[8.125rem]">
             JULIAN
           </h1>
-          <h1 className="text-white font-extrabold text-[2.125rem] lg:text-[7.5rem] leading-normal lg:leading-[5.625rem]">
+          <h1 className="text-white font-extrabold text-[2.125rem] lg:text-7xl  xl:text-[7.5rem] leading-normal xl:leading-[5.625rem]">
             FONTANA
           </h1>
         </div>
-        <h2 className="text-[#FB8122] font-semibold text-xl lg:text-[3.375rem] text-center">
+        <h2 className="text-[#FB8122] font-semibold text-xl lg:text-3xl xl:text-[3.375rem] text-center lg:text-left">
           FRONT END DEVELOPER
         </h2>
       </motion.div>
+      <motion.div
+        className="flex md:hidden w-full justify-center"
+        initial={{
+          opacity: 0,
+        }}
+        animate={{
+          opacity: 1,
+          transition: {
+            duration: 0.6,
+          },
+        }}
+      >
+        <Image
+          priority
+          src={foto_hero}
+          alt="Foto Julian Fontana"
+          className="w-48 lg:w-80 xl:w-[410px] select-none z-10"
+        />
+        <Image
+          priority
+          src={GradientBg}
+          alt="Gradient"
+          className="absolute xl:top-12 w-full xl:-z-10 select-none"
+        />
+      </motion.div>
       <motion.ul
-        className="flex flex-col gap-3 items-start mt-[348px] lg:mt-0"
+        className="flex flex-col gap-4 items-start"
         variants={container}
         initial="hidden"
         animate="visible"

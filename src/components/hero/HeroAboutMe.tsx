@@ -11,7 +11,7 @@ const HeroAboutMe = () => {
   });
   return (
     <div
-      className="flex flex-col gap-4 lg:gap-[22px] min-h-screen justify-center relative items-center lg:items-start"
+      className="flex flex-col gap-4 lg:gap-[22px] py-12 md:py-28  lg:min-h-screen justify-center relative items-center lg:items-start"
       ref={aboutRef}
     >
       <motion.div

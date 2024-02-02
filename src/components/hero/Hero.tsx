@@ -16,18 +16,18 @@ const Hero = () => {
   return (
     <motion.section
       id="about"
-      className="px-[30px] lg:px-28 py-7 lg:py-20 h-full w-full"
+      className="px-[30px] md:px-28 py-7 md:py-20 h-full w-full"
     >
       <div
-        className="relative flex flex-col lg:flex-row mx-auto lg:max-w-[1440px] bg-contain justify-items-center"
+        className="relative flex flex-col md:flex-row mx-auto md:max-w-[1440px] bg-contain justify-items-center"
         style={{
           backgroundImage: `url(${StarsBg.src})`,
           minHeight: "100vh",
         }}
       >
-        <div className="flex flex-col lg:pt-8 relative w-full">
+        <div className="flex flex-col md:pt-8 relative w-full">
           <motion.div
-            className="absolute top-28 right-4 lg:top-2 lg:right-2"
+            className="absolute top-28 right-4 md:top-2 md:right-2 opacity-15"
             initial={{
               rotate: -35,
             }}
@@ -47,7 +47,7 @@ const Hero = () => {
           <HeroBoard />
         </div>
         <motion.div
-          className="absolute lg:sticky top-[96px] lg:h-full w-full flex justify-center lg:items-start"
+          className="hidden md:sticky top-[96px] md:h-full w-full md:flex justify-center md:items-start"
           initial={{
             opacity: 0,
           }}
@@ -62,13 +62,13 @@ const Hero = () => {
             priority
             src={foto_hero}
             alt="Foto Julian Fontana"
-            className="w-48 lg:w-[410px] select-none z-10"
+            className="w-48 lg:w-80 xl:w-[410px] select-none z-10"
           />
           <Image
             priority
             src={GradientBg}
             alt="Gradient"
-            className="absolute lg:top-12 w-full lg:-z-10 select-none"
+            className="absolute xl:top-12 w-full xl:-z-10 select-none"
           />
         </motion.div>
       </div>

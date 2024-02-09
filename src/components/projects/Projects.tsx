@@ -1,6 +1,7 @@
 import StarsBg from "@/assets/stars-bg.webp";
 import Image from "next/image";
 import foto_projects from "@/assets/foto_projects.webp";
+import Project1Photo from "@/assets/projects_images/nexo-image.webp";
 import Project2Photo from "@/assets/projects_images/order-potions.webp";
 import Project3Photo from "@/assets/projects_images/charlas-breves.webp";
 import GradientBg from "@/assets/hero-gradient.webp";
@@ -22,7 +23,7 @@ const myProjects = [
       <ReactIcon key="react" className="w-8 h-auto" />,
       <TypescriptIcon key="typescript" className="w-8 h-auto" />,
     ],
-    // image:
+     image: Project1Photo,
     repository: "https://github.com/Julian03-lab/nexo-app",
   },
   {
